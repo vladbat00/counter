@@ -17,7 +17,9 @@ export default class CounterContainer extends AppComponent {
   }
 
   increment() {
-    store.value += 1;
+    if (store.value < 127) {
+      store.value += 1;
+    }
   }
 
   decrement() {

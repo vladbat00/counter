@@ -3,12 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://vladbat00.github.io/counter/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "prettier": "^3.5.3",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
