@@ -19,7 +19,7 @@ export default class CounterDigit extends AppComponent {
   }
 
   getDigit(): number {
-    return (store.value / Math.pow(this.base, this.index)) % this.base;
+    return Math.floor(store.value / Math.pow(this.base, this.index)) % this.base;
   }
 
   private index: number = 0;
